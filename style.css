@@ -1,0 +1,231 @@
+:root {
+  --high-light: #e2e8f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #0f172a;
+  color: #8695aa;
+  font-family: "inter", sans-serif;
+  padding: 3rem 1.5rem;
+  outline-color: #d32c6f;
+  display: grid;
+  grid-template-columns: repeat(0, minmax(0, 1fr));
+  gap: 6rem;
+}
+::selection {
+  background: #5eead4;
+  color: #134e4a;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+header div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+header h1 {
+  color: var(--high-light);
+  font-size: 2rem;
+  font-weight: 700;
+}
+header h4 {
+  color: var(--high-light);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+header p {
+  width: 30ch;
+  line-height: 25px;
+}
+header nav {
+  display: none;
+}
+.link-sec {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.social-link {
+  text-decoration: none;
+  color: #8695aa;
+  font-size: 1.4rem;
+}
+.social-link:hover {
+  color: var(--high-light);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+main h3 {
+  text-transform: uppercase;
+  color: var(--high-light);
+  font-size: 1rem;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.para-links {
+  text-decoration: none;
+  color: var(--high-light);
+}
+.para-links:hover {
+  color: #5eead4;
+}
+
+.experiences-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.card-contain {
+  display: flex;
+  flex-direction: column;
+}
+.card-year {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.card-detail {
+  font-size: 1rem;
+}
+.card-title {
+  color: var(--high-light);
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: #5eead4;
+}
+.card-title:hover .icon-size {
+  transform: translate(5px, -5px);
+}
+
+.experiences-card div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-size {
+  transition: all 0.3s ease-out;
+  font-size: 0.8rem;
+}
+.lang-button {
+  border: none;
+  color: #5eead4;
+  background-color: #122b39;
+  border-radius: 9999px;
+  height: max-content;
+  width: max-content;
+  padding: 8px 10px;
+
+  font-size: 0.8rem;
+}
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.project-img {
+  width: 12rem;
+  border: 2px solid #264247;
+  border-radius: 4px;
+}
+.project-card:hover .project-img {
+  border: 2px solid #4e5665;
+}
+footer p {
+  width: 50ch;
+}
+
+@media (min-width: 640px) {
+  header h1 {
+    font-size: 2.7rem;
+  }
+  header h4 {
+    font-size: 1.7rem;
+  }
+  .experiences-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  .project-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.7rem;
+  }
+  .project-info {
+    grid-area: 1/2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .project-img {
+    width: 18dvw;
+    grid-area: 1/1;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    padding: 5rem 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* gap: 6rem; */
+    padding: 6rem 6rem;
+    gap: 0rem;
+  }
+  header div {
+    position: sticky;
+    top: 96px;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 5rem;
+    text-decoration: none;
+  }
+
+  main h3 {
+    display: none;
+  }
+  .navigation-button a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .navigation-button:hover {
+    color: var(--high-light);
+  }
+
+  .link-sec {
+    padding-top: 7rem;
+  }
+  .project-img {
+    width: 9dvw;
+  }
+}
